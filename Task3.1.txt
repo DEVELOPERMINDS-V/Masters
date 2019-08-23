@@ -1,0 +1,7 @@
+1	Keystrokes: [DOWN ARROW][DOWN ARROW][DOWN ARROW][DOWN ARROW][ENTER] in "Master's Certification - PDF Example - Internet Explorer" with delay: 100 ms
+2	Object Cloning: Set Text of Window "File name:" in window 'Save As'; Value:"$AAApplicationPath$\Automation Anywhere"; Source: Window; Play Type: Object
+3	Keystrokes: [ALT DOWN]s[ALT UP] in "Save As" with delay: 500 ms
+4	Object Cloning: Set Text of Window "File name:" in window 'Save As'; Value:"$AAApplicationPath$\Automation Anywhere\My Docs\Task3"; Source: Window; Play Type: Object
+5	Message Box: "$AAApplicationPath$\Automation Anywhere\My Docs\Task3"
+6	Keystrokes: [ALT DOWN]s[ALT UP] in "Save As" with delay: 500 ms
+7	Keystrokes: [ALT DOWN]s[ALT UP] in "Save As" with delay: 500 ms

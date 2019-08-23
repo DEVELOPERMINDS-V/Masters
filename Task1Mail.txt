@@ -1,0 +1,10 @@
+1	Begin Error Handling; Action: Continue; Options:  Task Status: Pass
+2	     Excel: Open Spreadsheet "$AAApplicationPath$\Automation Anywhere\My Docs\Task1\Employee.xlsx". ActiveSheet: "Default". Contains Header. Session: sendEmail
+3	     Comment: Please enter the commands to handle errors.
+4	     Excel: Get All Cells Session: sendEmail
+5	     Start Loop "Each row in an Excel dataset of Session: sendEmail"
+6	          Comment: Please enter your commands to loop. Use $Excel Column$ variable for each row in Excel.
+7	          Message Box: "$Excel Column(1)$"
+8	          Send Email: Subject "Automation Anywhere finished executing the task." 
+9	     End Loop
+10	End Error Handling

@@ -1,0 +1,53 @@
+1	If Folder Does Not Exist ("$AAApplicationPath$\Automation Anywhere\My Docs\Task3")  Then  
+2	     Comment: Please enter the conditional commands here.
+3	     Create Folder "$AAApplicationPath$\Automation Anywhere\My Docs\Task3"
+4	End If
+5	Open "http://rpademo.automationanywhere.com/master-pdf.php"
+6	Object Cloning: Set Text of TextBox "username" in window 'Master's Certification - PDF Example - Internet Explorer'; Value:"$vUserName$"; Source: Window; Play Type: Object
+7	Object Cloning: Set Text of TextBox "password" in window 'Master's Certification - PDF Example - Internet Explorer'; Value: "***********" ; Source: Windows; Play Type: Object 
+8	Object Cloning: Click On PushButton "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Double Click; Source: Window; Play Type: Object
+9	Object Cloning: Click On Link "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Right Click; Source: Window; Play Type: Object
+10	Run Task "C:\Users\Siva\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Task3.1.atmx" @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: Do Not Pass variable
+11	If Windows Object (PushButton: 'Close') Properties in the window "Master's Certification - PDF Example - Internet Explorer"
+12	     Comment: Please enter the conditional commands here.
+13	     Object Cloning: Click On PushButton "Close" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Left Click; Source: Window; Play Type: Object
+14	End If
+15	Object Cloning: Click On Link "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Right Click; Source: Window; Play Type: Object
+16	Run Task "C:\Users\Siva\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Task3.1.atmx" @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: Do Not Pass variable
+17	If Windows Object (PushButton: 'Close') Properties in the window "Master's Certification - PDF Example - Internet Explorer"
+18	     Comment: Please enter the conditional commands here.
+19	     Object Cloning: Click On PushButton "Close" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Left Click; Source: Window; Play Type: Object
+20	End If
+21	Object Cloning: Click On Link "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Right Click; Source: Window; Play Type: Object
+22	Run Task "C:\Users\Siva\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Task3.1.atmx" @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: Do Not Pass variable
+23	Loop While Windows Object (PushButton: 'Close') Properties in the window "Master's Certification - PDF Example - Internet Explorer"
+24	     Comment: Please enter your commands to loop.
+25	End Loop
+26	Object Cloning: Click On Link "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Right Click; Source: Window; Play Type: Object
+27	Run Task "C:\Users\Siva\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Task3.1.atmx" @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: Do Not Pass variable
+28	If Windows Object (PushButton: 'Close') Properties in the window "Master's Certification - PDF Example - Internet Explorer"
+29	     Comment: Please enter the conditional commands here.
+30	     Object Cloning: Click On PushButton "Close" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Left Click; Source: Window; Play Type: Object
+31	End If
+32	Object Cloning: Click On Link "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Right Click; Source: Window; Play Type: Object
+33	Run Task "C:\Users\Siva\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Task3.1.atmx" @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: Do Not Pass variable
+34	If Windows Object (PushButton: 'Close') Properties in the window "Master's Certification - PDF Example - Internet Explorer"
+35	     Comment: Please enter the conditional commands here.
+36	     Object Cloning: Click On PushButton "Close" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Left Click; Source: Window; Play Type: Object
+37	End If
+38	Object Cloning: Click On Link "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Right Click; Source: Window; Play Type: Object
+39	Run Task "C:\Users\Siva\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Task3.1.atmx" @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: Do Not Pass variable
+40	If Windows Object (PushButton: 'Close') Properties in the window "Master's Certification - PDF Example - Internet Explorer"
+41	     Comment: Please enter the conditional commands here.
+42	     Object Cloning: Click On PushButton "Close" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Left Click; Source: Window; Play Type: Object
+43	End If
+44	Object Cloning: Click On Link "" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Right Click; Source: Window; Play Type: Object
+45	Run Task "C:\Users\Siva\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Task3.1.atmx" @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: Do Not Pass variable
+46	If Windows Object (PushButton: 'Close') Properties in the window "Master's Certification - PDF Example - Internet Explorer"
+47	     Comment: Please enter the conditional commands here.
+48	     Object Cloning: Click On PushButton "Close" in window 'Master's Certification - PDF Example - Internet Explorer'; Click Type: Left Click; Source: Window; Play Type: Object
+49	End If
+50	If Folder Does Not Exist ("$AAApplicationPath$\Automation Anywhere\My Docs\Task3\Task3New")  Then  
+51	     Comment: Please enter the conditional commands here.
+52	     Create Folder "$AAApplicationPath$\Automation Anywhere\My Docs\Task3\Task3New"
+53	End If

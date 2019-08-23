@@ -1,0 +1,39 @@
+1	Excel: Open Spreadsheet "$AAApplicationPath$\Automation Anywhere\My Docs\Task2\Data.xlsx". ActiveSheet: "Default". Contains Header. Session: Data
+2	Excel: Open Spreadsheet "$AAApplicationPath$\Automation Anywhere\My Docs\Task2\MacroSheet.xlsx". ActiveSheet: "Default". Contains Header. Session: Macro
+3	Excel: Go to cell "E2". Session: Data
+4	Excel: Get All Cells Session: Data
+5	Start Loop "Each row in an Excel dataset of Session: Data"
+6	     Variable Operation:  To $vDataPaymentMode$
+7	     Variable Operation:  To $vDataBankName$
+8	     Variable Operation:  To $vDataRRN$
+9	     Variable Operation:  To $vMacroPaymentMode$
+10	     Variable Operation:  To $vMacroBankName$
+11	     Variable Operation:  To $vMacroRRN$
+12	     Variable Operation:  To $vMacroNameFromMacro$
+13	     Comment: Please enter your commands to loop. Use $Excel Column$ variable for each row in Excel.
+14	     Message Box: "$Excel Column(2)$$Excel Column(3)$$Excel Column(4)$"
+15	     Variable Operation: $Excel Column(2)$ To $vDataPaymentMode$
+16	     Variable Operation: $Excel Column(3)$ To $vDataBankName$
+17	     Variable Operation: $Excel Column(4)$ To $vDataRRN$
+18	     Excel: Get All Cells Session: Macro
+19	     Start Loop "Each row in an Excel dataset of Session: Macro"
+20	          Comment: Please enter your commands to loop. Use $Excel Column$ variable for each row in Excel.
+21	          Message Box: "$Excel Column(2)$$Excel Column(3)$$Excel Column(5)$"
+22	          Variable Operation: $Excel Column(2)$ To $vMacroPaymentMode$
+23	          Variable Operation: $Excel Column(3)$ To $vMacroBankName$
+24	          Variable Operation: $Excel Column(5)$ To $vMacroRRN$
+25	          If $vDataPaymentMode$ Equal To (=) $vMacroPaymentMode$ AND $vDataBankName$ Equal To (=) $vMacroBankName$ AND $vDataRRN$ Equal To (=) $vMacroRRN$ Then
+26	               Comment: Please enter the conditional commands here.
+27	               Variable Operation: $Excel Column(6)$ To $vMacroNameFromMacro$
+28	               Exit Loop
+29	          End If
+30	          If $vDataPaymentMode$ Equal To (=) $vMacroPaymentMode$ AND $vDataRRN$ Equal To (=) $vMacroRRN$ AND $vMacroBankName$ Equal To (=) "-" Then
+31	               If $vDataBankName$ Equal To (=) "SBI" OR $vDataBankName$ Equal To (=) "Corporation Bank" OR $vDataBankName$ Equal To (=) "HDFC" OR $vDataBankName$ Equal To (=) "ICICI" Then
+32	                    Variable Operation: $Excel Column(6)$ To $vMacroNameFromMacro$
+33	                    Exit Loop
+34	               End If
+35	          End If
+36	     End Loop
+37	     Excel: Set value of Active Cell with "$vMacroNameFromMacro$". Session: Data
+38	     Excel: Go to one cell below the active cell. Session: Data
+39	End Loop
